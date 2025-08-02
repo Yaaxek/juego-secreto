@@ -48,8 +48,6 @@ function limpiarCaja(){
 
 function generarNumeroSecreto() {
     let numeroGenerado = Math.floor(Math.random()* numeroMaximo) + 1;
-    console.log(numeroGenerado);
-    console.log(listaNumerosSorteados);
     if (listaNumerosSorteados.length == numeroMaximo){
         asignarTextoElemento('#parrafo1', 'No hay mas numeros disponibles.');
         asignarTextoElemento('#parrafo2', 'El juego ha terminado.');
@@ -84,5 +82,6 @@ function reiniciarJuego(){
     // Desactivar el boton de nuevo juego
     document.querySelector('#reiniciar').setAttribute('disabled', true);
 }
+
 
 condicionesIniciales();
