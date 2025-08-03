@@ -12,6 +12,12 @@ function asignarTextoElemento(elemento, texto){
 
 function verificarIntento(){ 
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
+    // Validar si el valor es un número válido y está en el rango correcto
+    if (isNaN(numeroDeUsuario) || numeroDeUsuario < 1 || numeroDeUsuario > numeroMaximo) {
+        asignarTextoElemento('#parrafo1',`Por favor ingresa un número entre el 1 y ${numeroMaximo}.`);
+        limpiarCaja();
+        return;
+    }
 
     if (numeroDeUsuario === numeroSecreto){
         asignarTextoElemento('#parrafo1', `Acertaste el numero en ${intentos} ${(intentos ===1) ? 'vez.' : 'veces.'}`);
@@ -85,3 +91,4 @@ function reiniciarJuego(){
 
 
 condicionesIniciales();
+
