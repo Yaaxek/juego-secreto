@@ -12,6 +12,7 @@ function asignarTextoElemento(elemento, texto){
 
 function verificarIntento(){ 
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
+    
     // Validar si el valor es un número válido y está en el rango correcto
     if (isNaN(numeroDeUsuario) || numeroDeUsuario < 1 || numeroDeUsuario > numeroMaximo) {
         asignarTextoElemento('#parrafo1',`Por favor ingresa un número entre el 1 y ${numeroMaximo}.`);
@@ -54,6 +55,7 @@ function limpiarCaja(){
 
 function generarNumeroSecreto() {
     let numeroGenerado = Math.floor(Math.random()* numeroMaximo) + 1;
+
     if (listaNumerosSorteados.length == numeroMaximo){
         asignarTextoElemento('#parrafo1', 'No hay mas numeros disponibles.');
         asignarTextoElemento('#parrafo2', 'El juego ha terminado.');
@@ -89,6 +91,4 @@ function reiniciarJuego(){
     document.querySelector('#reiniciar').setAttribute('disabled', true);
 }
 
-
 condicionesIniciales();
-
