@@ -11,7 +11,7 @@ Un sencillo juego de adivinanza de números creado con HTML, CSS y JavaScript. E
 ### 📌 English
 - You must enter a number between **1 and 10**.
 - You have **4 attempts** to guess the correct number.
-- If your number is higher or lower than the secret number, you’ll get a clue.
+- If your number is higher ('El numero secreto es mayor') or lower than the secret number ('El numero secreto es menor'), you’ll get a clue.
 - After the attempts are exhausted or the correct number is guessed, the game ends.
 - You can click **“Nuevo juego”** to start a new round.
 
